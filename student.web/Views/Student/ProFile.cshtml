@@ -1,0 +1,89 @@
+﻿@model StudentViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>User Profile</title>
+  <style>
+    .profile {
+      margin-top: 50px;
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .profile h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .profile p {
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .profile ul {
+      padding-left: 0;
+      list-style-type: none;
+      margin-top: 20px;
+    }
+
+    .profile ul li {
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* Table styling */
+    .primary-table {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <!-- User avatar -->
+          <img src="~/Image/@Model.Image">
+        </div>
+        <div class="col-md-8 text-center">
+          <!-- User information -->
+          <h2>@Model.FirstName @Model.FattherName @Model.GrandfatherName @Model.FamilyName</h2>
+          <p>pirthday : @Model.DOB<p>
+          <p>Location: @Model.Address</p>
+          <p>ID Number : @Model.IdNumber</p>
+          <p>phone Number : @Model.Phone<p>
+          <p>Level : @Model.Level</p>
+          <p>Gender : @Model.Gender</p>
+          <!-- Additional user details -->
+          <h4>Additional Details</h4>
+          <ul>
+            <li>estimate: @Model.estimate</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+

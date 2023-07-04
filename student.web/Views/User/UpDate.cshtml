@@ -1,0 +1,96 @@
+﻿@model UpDateUserDto
+
+@{
+    ViewData["Title"] = "تعديل مستخدم ";
+    Layout = null;
+}
+
+<form class="ajaxForm" asp-action="UpDate" tname="#kt_datatable" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" type="hidden"/>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                       <label asp-for="FattherName" class="control-label"></label>
+                        <input asp-for="FattherName" class="form-control" />
+                        <span asp-validation-for="FattherName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                       <label asp-for="GrandfatherName" class="control-label"></label>
+                        <input asp-for="GrandfatherName" class="form-control" />
+                        <span asp-validation-for="GrandfatherName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="FamilyName" class="control-label"></label>
+                        <input asp-for="FamilyName" class="form-control" />
+                        <span asp-validation-for="FamilyName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                       <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+               <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Imege" class="control-label"></label>
+                        <input asp-for="Imege" class="form-control" />
+                        <span asp-validation-for="Imege" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                       <label asp-for="DOB" class="control-label"></label>
+                        <input asp-for="DOB" class="form-control" />
+                        <span asp-validation-for="DOB" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="UserType" class="control-label"></label>
+                            <select asp-for="UserType" class="form-control" >
+                                <option value="@UserType.admin">ادمن</option>
+                                <option value="@UserType.student">طالب</option>
+                            </select>
+                            <span asp-validation-for="UserType" class="text-danger"></span>
+                        </div>
+                </div>
+            </div>
+
+
+             <div class="form-group">
+                <input type="submit" value="تعديل" class="btn btn-primary" />
+                <a data-dismiss="modal" aria-label="Close" class="btn btn-danger">الغاء</a>
+            </div>
+        </form>
+<script>
+    PageLoadActions();
+</script>
+
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
